@@ -10,7 +10,7 @@ namespace YMS5173BookStore.Entities.Entity
 {
     public enum Status
     {
-        //Biz değer vermesekte kendş index mantığı vardı
+        //Biz değer vermesekte kendi index mantığı vardı
         Active=1,
         Modified=2,
         Passive=3

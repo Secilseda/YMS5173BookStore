@@ -5,19 +5,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7E99989B-9F52-4869-9E87-1E417C6D4FD2}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>YMS5173BookStore.UI</RootNamespace>
-    <AssemblyName>YMS5173BookStore.UI</AssemblyName>
+    <ProjectGuid>{DAEF1E2B-F6A9-4538-8F52-50A90D3E7690}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YMS5173BookStore.Repository</RootNamespace>
+    <AssemblyName>YMS5173BookStore.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -27,7 +26,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -45,106 +43,35 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminAssignedBook.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminAssignedBook.Designer.cs">
-      <DependentUpon>AdminAssignedBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminBookPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminBookPage.Designer.cs">
-      <DependentUpon>AdminBookPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminCategoryPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminCategoryPage.Designer.cs">
-      <DependentUpon>AdminCategoryPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminHomePage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminHomePage.Designer.cs">
-      <DependentUpon>AdminHomePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdminUserPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminUserPage.Designer.cs">
-      <DependentUpon>AdminUserPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Abstraction\IBookRepository.cs" />
+    <Compile Include="Abstraction\ICategoryRepository.cs" />
+    <Compile Include="ConCreat\EfBaseRepository.cs" />
+    <Compile Include="ConCreat\EfBookRepository.cs" />
+    <Compile Include="ConCreat\EfCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminAssignedBook.resx">
-      <DependentUpon>AdminAssignedBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminBookPage.resx">
-      <DependentUpon>AdminBookPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminCategoryPage.resx">
-      <DependentUpon>AdminCategoryPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminHomePage.resx">
-      <DependentUpon>AdminHomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminUserPage.resx">
-      <DependentUpon>AdminUserPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YMS5173BookStore.DataAccess\YMS5173BookStore.DataAccess.csproj">
-      <Project>{2E10E317-D2EC-4BDB-BEC6-6D2ACE183727}</Project>
+      <Project>{2e10e317-d2ec-4bdb-bec6-6d2ace183727}</Project>
       <Name>YMS5173BookStore.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\YMS5173BookStore.Entities\YMS5173BookStore.Entities.csproj">
-      <Project>{617D7D54-40B8-4620-8479-7FD4E2602709}</Project>
+      <Project>{617d7d54-40b8-4620-8479-7fd4e2602709}</Project>
       <Name>YMS5173BookStore.Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\YMS5173BookStore.Repository\YMS5173BookStore.Repository.csproj">
-      <Project>{DAEF1E2B-F6A9-4538-8F52-50A90D3E7690}</Project>
-      <Name>YMS5173BookStore.Repository</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

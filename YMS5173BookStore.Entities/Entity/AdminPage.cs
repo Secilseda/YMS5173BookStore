@@ -8,14 +8,11 @@ using System.Threading.Tasks;
 
 namespace YMS5173BookStore.Entities.Entity
 {
-    [Table("Categories")]
-    public class Category:BaseEntity
-    {
-        [Required]
-        public string Name { get; set; }
-        [Required]
-        public string Description { get; set; }
-
-        public virtual List<Book> Books { get; set; }
-    }
+	[Table("AdminPage")]
+	public class AdminPage:BaseEntity
+	{
+		[Required]
+		public string Name { get; set; }
+		public int Password { get; set; }
+	}
 }

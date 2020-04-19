@@ -18,5 +18,8 @@ namespace YMS5173BookStore.Entities.Entity
         [MaxLength(256)]
         public string Content { get; set; }
         public string ISNB_No { get; set; }
+
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

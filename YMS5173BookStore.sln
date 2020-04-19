@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YMS5173BookStore.UI", "YMS5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YMS5173BookStore.Entities", "YMS5173BookStore.Entities\YMS5173BookStore.Entities.csproj", "{617D7D54-40B8-4620-8479-7FD4E2602709}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YMS5173BookStore.DataAccess", "YMS5173BookStore.DataAccess\YMS5173BookStore.DataAccess.csproj", "{2E10E317-D2EC-4BDB-BEC6-6D2ACE183727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YMS5173BookStore.Repository", "YMS5173BookStore.Repository\YMS5173BookStore.Repository.csproj", "{DAEF1E2B-F6A9-4538-8F52-50A90D3E7690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{617D7D54-40B8-4620-8479-7FD4E2602709}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{617D7D54-40B8-4620-8479-7FD4E2602709}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{617D7D54-40B8-4620-8479-7FD4E2602709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E10E317-D2EC-4BDB-BEC6-6D2ACE183727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E10E317-D2EC-4BDB-BEC6-6D2ACE183727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E10E317-D2EC-4BDB-BEC6-6D2ACE183727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E10E317-D2EC-4BDB-BEC6-6D2ACE183727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEF1E2B-F6A9-4538-8F52-50A90D3E7690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEF1E2B-F6A9-4538-8F52-50A90D3E7690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEF1E2B-F6A9-4538-8F52-50A90D3E7690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEF1E2B-F6A9-4538-8F52-50A90D3E7690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
